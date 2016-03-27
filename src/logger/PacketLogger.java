@@ -7,10 +7,13 @@
  ***************************************************************/
 package logger;
 
+import jpcap.*;
 
 public class PacketLogger{
 
 	public PacketLogger(){
-
+		NetworkInterface[] NETWORK_INTERFACES;
+		JpcapCaptor CAP;
+		
 	}
 }
