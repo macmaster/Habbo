@@ -14,7 +14,7 @@ public class CaptureThread{
 	public CaptureThread(){
 		SwingUtilities.invokeLater(new Runnable(){
 			public void run(){
-				MainFrame frame = new MainFrame("PLog Swing GUI");
+				JFrame frame = new JFrame("PLog Swing GUI");
 				frame.setSize(400, 400);
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				frame.setVisible(true);

@@ -38,8 +38,8 @@ public class PLogGUI{
 	JButton B_LOAD = new JButton("LOAD");
 	JButton B_HELP = new JButton("HELP");
 	JButton B_EXIT = new JButton("EXIT");
-	JRadioButton RB_Filter_Enable = new JRadioButton("Enable");
-	JRadioButton RB_Filter_Disable = new JRadioButton("Disable");
+	JRadioButton RB_FilterEnable = new JRadioButton("Enable");
+	JRadioButton RB_FilterDisable = new JRadioButton("Disable");
 	JRadioButton RB_Port_Special = new JRadioButton("Special Port");
 	JRadioButton RB_Port_HTTP = new JRadioButton("HTTP (80)");
 	JRadioButton RB_Port_SSL = new JRadioButton("SSL (443)");
@@ -76,9 +76,7 @@ public class PLogGUI{
 		// disableButtons();
 	}
 
-	/**
-	 * BuildGUI() initializes the PLogGUI settings
-	 */
+	/** BuildGUI() initializes the PLogGUI settings */
 	public void buildGUI(){
 		// calculate screen size
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -105,6 +103,12 @@ public class PLogGUI{
 		SP_OUTPUT.setViewportView(TA_OUTPUT);
 		SP_OUTPUT.setBounds((width / 60), (height / 24), (width * 19 / 20), (height * 9 / 16));
 		mainWindow.getContentPane().add(SP_OUTPUT);
+
+		/**************************************************************************************************
+		 * Command_Buttons
+		 * 
+		 * Control Higher Level Packet Logging Commands
+		 **************************************************************************************************/
 
 		// CAPTURE Button
 		B_CAPTURE.setBackground(Color.RED);
@@ -216,47 +220,115 @@ public class PLogGUI{
 		});
 		mainWindow.getContentPane().add(B_EXIT);
 
+		/**************************************************************************************************
+		 * Radio_Buttons
+		 * 
+		 * Control Network Filtering (unique selection)
+		 **************************************************************************************************/
+		JRadioButton RB_Port_Special = new JRadioButton("Special Port");
+		JRadioButton RB_Port_HTTP = new JRadioButton("HTTP (80)");
+		JRadioButton RB_Port_SSL = new JRadioButton("SSL (443)");
+		JRadioButton RB_Port_FTP = new JRadioButton("FTP (21)");
+		JRadioButton RB_Port_SSH = new JRadioButton("SSH (22)");
+		JRadioButton RB_Port_TelNet = new JRadioButton("TelNet (23)");
+		JRadioButton RB_Port_SMTP = new JRadioButton("SMTP (25)");
+		JRadioButton RB_Port_POP3 = new JRadioButton("POP3 (110)");
+		JRadioButton RB_Port_IMAP = new JRadioButton("IMAP (143)");
+		JRadioButton RB_Port_IMAPS = new JRadioButton("IMAPS (993)");
+		JRadioButton RB_Port_DNS = new JRadioButton("DNS (53)");
+		JRadioButton RB_Port_NetBIOS = new JRadioButton("NetBIOS (139)");
+		JRadioButton RB_Port_SAMBA = new JRadioButton("SAMBA (137)");
+		JRadioButton RB_Port_AD = new JRadioButton("AD (445)");
+		JRadioButton RB_Port_SQL = new JRadioButton("SQL (118)");
+		JRadioButton RB_Port_LDAP = new JRadioButton("LDAP (389)");
+
+		// ENABLE filter
+		BG_Filters.add(RB_FilterEnable);
+		RB_FilterEnable.setBounds((width * 26 / 60), (height * 11 / 16), (width * 1 / 12),
+				(height * 1 / 24));
+		RB_FilterEnable.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent X){
+				Action_RB_FilterEnable(X);
+			}
+		});
+		mainWindow.getContentPane().add(RB_FilterEnable);
+		
+		// DISABLE filter
+		BG_Filters.add(RB_FilterDisable);
+		RB_FilterDisable.setSelected(true);
+		RB_FilterDisable.setBounds((width * 31 / 60), (height * 11 / 16), (width * 1 / 10),
+				(height * 1 / 24));
+		RB_FilterDisable.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent X){
+				Action_RB_FilterDisable(X);
+			}
+		});
+		mainWindow.getContentPane().add(RB_FilterDisable);
+		
+		//HTTP
+		BG_Ports.add(RB_Port_HTTP);
+		RB_Port_HTTP.setBounds((width * 38 / 60), (height * 11 / 16), (width * 1 / 8),
+				(height * 1 / 24));
+
 		mainWindow.setVisible(true);
 	}
 
-	/** Event Handlers */
+	/**************************************************************************************************
+	 * Command_Button Event Handlers
+	 * 
+	 * Perform command-triggered events.
+	 **************************************************************************************************/
+
 	public void Action_B_CAPTURE(ActionEvent X){
 		TA_OUTPUT.append("capture!\n");
 	}
-	
+
 	public void Action_B_STOP(ActionEvent X){
 		TA_OUTPUT.append("stop!\n");
 	}
-	
+
 	public void Action_B_SELECT(ActionEvent X){
 		TA_OUTPUT.append("select!\n");
 	}
-	
+
 	public void Action_B_LIST(ActionEvent X){
 		TA_OUTPUT.append("list!\n");
 	}
-	
+
 	public void Action_B_FILTER(ActionEvent X){
 		TA_OUTPUT.append("filter!\n");
 	}
-	
+
 	public void Action_B_INFO(ActionEvent X){
 		TA_OUTPUT.append("info!\n");
 	}
-	
+
 	public void Action_B_SAVE(ActionEvent X){
 		TA_OUTPUT.append("save!\n");
 	}
-	
+
 	public void Action_B_LOAD(ActionEvent X){
 		TA_OUTPUT.append("load!\n");
 	}
-	
+
 	public void Action_B_HELP(ActionEvent X){
 		TA_OUTPUT.append("help!\n");
 	}
-	
+
 	public void Action_B_EXIT(ActionEvent X){
 		TA_OUTPUT.append("exit!\n");
+	}
+
+	/**************************************************************************************************
+	 * Radio_Buttons
+	 * 
+	 * Control Network Filtering Events
+	 **************************************************************************************************/
+
+	public void Action_RB_FilterEnable(ActionEvent X){
+		TA_OUTPUT.append("enable!\n");
+	}
+	public void Action_RB_FilterDisable(ActionEvent X){
+		TA_OUTPUT.append("disable!\n");
 	}
 }
