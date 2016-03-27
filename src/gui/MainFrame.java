@@ -38,7 +38,7 @@ public class MainFrame extends JFrame{
 				textArea.append("Hello!\n");
 			}
 		});
-		
+
 	}
 
 }
