@@ -83,7 +83,7 @@ public class PLogGUI{
 		} catch(IOException e){
 			System.err.println("Failled to build GUI! exiting...");
 		}
-		
+
 	}
 
 	/** BuildGUI() initializes the PLogGUI settings */
@@ -247,7 +247,7 @@ public class PLogGUI{
 			}
 		});
 		mainWindow.getContentPane().add(RB_FilterEnable);
-		
+
 		// DISABLE filter
 		BG_Filters.add(RB_FilterDisable);
 		RB_FilterDisable.setSelected(true);
@@ -259,117 +259,129 @@ public class PLogGUI{
 			}
 		});
 		mainWindow.getContentPane().add(RB_FilterDisable);
-		
-		//Special
+
+		// Special
 		BG_Ports.add(RB_Port_Special);
 		RB_Port_Special.setBounds((width * 31 / 60), (height * 51 / 64), (width * 1 / 8),
 				(height * 1 / 24));
 		mainWindow.getContentPane().add(RB_Port_Special);
-		
-		//HTTP
+
+		// HTTP
 		BG_Ports.add(RB_Port_HTTP);
 		RB_Port_HTTP.setFont(new Font("Serif", 0, 9));
 		RB_Port_HTTP.setBounds((width * 39 / 60), (height * 42 / 64), (width * 1 / 10),
 				(height * 1 / 24));
 		mainWindow.getContentPane().add(RB_Port_HTTP);
-		
-		//SSL
+
+		// SSL
 		BG_Ports.add(RB_Port_SSL);
 		RB_Port_SSL.setFont(new Font("Serif", 0, 9));
 		RB_Port_SSL.setBounds((width * 39 / 60), (height * 45 / 64), (width * 1 / 10),
 				(height * 1 / 24));
 		mainWindow.getContentPane().add(RB_Port_SSL);
-		
-		//FTP
+
+		// FTP
 		BG_Ports.add(RB_Port_FTP);
 		RB_Port_FTP.setFont(new Font("Serif", 0, 9));
 		RB_Port_FTP.setBounds((width * 39 / 60), (height * 48 / 64), (width * 1 / 10),
 				(height * 1 / 24));
 		mainWindow.getContentPane().add(RB_Port_FTP);
-		
-		//SSH
+
+		// SSH
 		BG_Ports.add(RB_Port_SSH);
 		RB_Port_SSH.setFont(new Font("Serif", 0, 9));
 		RB_Port_SSH.setBounds((width * 39 / 60), (height * 51 / 64), (width * 1 / 10),
 				(height * 1 / 24));
 		mainWindow.getContentPane().add(RB_Port_SSH);
-		
-		//TelNet
+
+		// TelNet
 		BG_Ports.add(RB_Port_TelNet);
 		RB_Port_TelNet.setFont(new Font("Serif", 0, 9));
 		RB_Port_TelNet.setBounds((width * 39 / 60), (height * 54 / 64), (width * 1 / 10),
 				(height * 1 / 24));
 		mainWindow.getContentPane().add(RB_Port_TelNet);
-		
-		//SMTP
+
+		// SMTP
 		BG_Ports.add(RB_Port_SMTP);
 		RB_Port_SMTP.setFont(new Font("Serif", 0, 9));
 		RB_Port_SMTP.setBounds((width * 45 / 60), (height * 42 / 64), (width * 1 / 10),
 				(height * 1 / 24));
 		mainWindow.getContentPane().add(RB_Port_SMTP);
 
-		//POP3
+		// POP3
 		BG_Ports.add(RB_Port_POP3);
 		RB_Port_POP3.setFont(new Font("Serif", 0, 9));
 		RB_Port_POP3.setBounds((width * 45 / 60), (height * 45 / 64), (width * 1 / 10),
 				(height * 1 / 24));
 		mainWindow.getContentPane().add(RB_Port_POP3);
 
-		//IMAP
+		// IMAP
 		BG_Ports.add(RB_Port_IMAP);
 		RB_Port_IMAP.setFont(new Font("Serif", 0, 9));
 		RB_Port_IMAP.setBounds((width * 45 / 60), (height * 48 / 64), (width * 1 / 10),
 				(height * 1 / 24));
 		mainWindow.getContentPane().add(RB_Port_IMAP);
 
-		//IMAPS
+		// IMAPS
 		BG_Ports.add(RB_Port_IMAPS);
 		RB_Port_IMAPS.setFont(new Font("Serif", 0, 9));
 		RB_Port_IMAPS.setBounds((width * 45 / 60), (height * 51 / 64), (width * 1 / 10),
 				(height * 1 / 24));
 		mainWindow.getContentPane().add(RB_Port_IMAPS);
 
-		//DNS
+		// DNS
 		BG_Ports.add(RB_Port_DNS);
 		RB_Port_DNS.setFont(new Font("Serif", 0, 9));
 		RB_Port_DNS.setBounds((width * 45 / 60), (height * 54 / 64), (width * 1 / 10),
 				(height * 1 / 24));
 		mainWindow.getContentPane().add(RB_Port_DNS);
 
-		//NetBIOS
+		// NetBIOS
 		BG_Ports.add(RB_Port_NetBIOS);
 		RB_Port_NetBIOS.setFont(new Font("Serif", 0, 9));
 		RB_Port_NetBIOS.setBounds((width * 51 / 60), (height * 42 / 64), (width * 1 / 9),
 				(height * 1 / 24));
 		mainWindow.getContentPane().add(RB_Port_NetBIOS);
-		
-		//SAMBA
+
+		// SAMBA
 		BG_Ports.add(RB_Port_SAMBA);
 		RB_Port_SAMBA.setFont(new Font("Serif", 0, 9));
 		RB_Port_SAMBA.setBounds((width * 51 / 60), (height * 45 / 64), (width * 1 / 9),
 				(height * 1 / 24));
 		mainWindow.getContentPane().add(RB_Port_SAMBA);
 
-		//AD
+		// AD
 		BG_Ports.add(RB_Port_AD);
 		RB_Port_AD.setFont(new Font("Serif", 0, 9));
 		RB_Port_AD.setBounds((width * 51 / 60), (height * 48 / 64), (width * 1 / 9),
 				(height * 1 / 24));
 		mainWindow.getContentPane().add(RB_Port_AD);
-		
-		//SQL
+
+		// SQL
 		BG_Ports.add(RB_Port_SQL);
 		RB_Port_SQL.setFont(new Font("Serif", 0, 9));
 		RB_Port_SQL.setBounds((width * 51 / 60), (height * 51 / 64), (width * 1 / 9),
 				(height * 1 / 24));
 		mainWindow.getContentPane().add(RB_Port_SQL);
-		
-		//LDAP
+
+		// LDAP
 		BG_Ports.add(RB_Port_LDAP);
 		RB_Port_LDAP.setFont(new Font("Serif", 0, 9));
 		RB_Port_LDAP.setBounds((width * 51 / 60), (height * 54 / 64), (width * 1 / 9),
 				(height * 1 / 24));
 		mainWindow.getContentPane().add(RB_Port_LDAP);
+
+		/**************************************************************************************************
+		 * Lables / Titles
+		 * 
+		 * Labels for various Text fields / application title. etc...
+		 **************************************************************************************************/
+		
+		// Application Title
+		L_Title.setForeground(new Color(0x10,0x4A,0x0D)); // army green x104A0D
+		L_Title.setFont(new Font("Monospaced", Font.BOLD, 12));
+		L_Title.setBounds((width * 1 / 4), (height * 0), (width * 1/2), (height * 1/16));
+		mainWindow.add(L_Title);
 		
 		
 		mainWindow.setVisible(true);
@@ -430,6 +442,7 @@ public class PLogGUI{
 	public void Action_RB_FilterEnable(ActionEvent X){
 		TA_OUTPUT.append("enable!\n");
 	}
+
 	public void Action_RB_FilterDisable(ActionEvent X){
 		TA_OUTPUT.append("disable!\n");
 	}
