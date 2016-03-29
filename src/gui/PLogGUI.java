@@ -376,14 +376,29 @@ public class PLogGUI{
 		 * 
 		 * Labels for various Text fields / application title. etc...
 		 **************************************************************************************************/
-		
+
 		// Application Title
-		L_Title.setForeground(new Color(0x10,0x4A,0x0D)); // army green x104A0D
+		L_Title.setForeground(new Color(0x10, 0x4A, 0x0D)); // army green x104A0D
 		L_Title.setFont(new Font("Monospaced", Font.BOLD, 12));
-		L_Title.setBounds((width * 1 / 4), (height * 0), (width * 1/2), (height * 1/16));
+		L_Title.setBounds((width * 1 / 4), (height * 0), (width * 1 / 2), (height * 1 / 16));
 		mainWindow.add(L_Title);
+
+		// Interface Title
+		L_Interface.setForeground(Color.black);
+		L_Interface.setFont(new Font("Monospaced", Font.BOLD, 12));
+		L_Interface.setBounds((width / 30), (height * 5 / 8), (width * 1 / 12), (height * 1 / 8));
+		mainWindow.add(L_Interface);
 		
+		/*
+		JLabel L_FilterStatus = new JLabel("Port Filter Status");
+		JLabel L_FilterStatusBox = new JLabel("DISABLED (ALL PORTS)");
+		JLabel L_Presets = new JLabel("Port Filter Presets");
+		JLabel L_SpecialPort = new JLabel("Special Port #");
+		JTextField TF_SelectInterface = new JTextField();
+		JTextField TF_SpecialPort = new JTextField();
+		*/
 		
+
 		mainWindow.setVisible(true);
 	}
 
