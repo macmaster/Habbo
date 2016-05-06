@@ -21,9 +21,9 @@ namespace WallScript {
 		protected string windowFace;
 
 		// move packet headers
-		protected const int SAY_OUT = 1403;
-		protected const int CLICK_WINDOW = 853;
-		protected const int MOVE_WINDOW = 3492;
+		protected const int SAY_OUT = 389;
+		protected const int CLICK_WINDOW = 2389;
+		protected const int MOVE_WINDOW = 3724;
 
 		public WallForm() {
 			// window init
