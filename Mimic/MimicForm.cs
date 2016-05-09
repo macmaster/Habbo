@@ -22,6 +22,10 @@ namespace Mimic
 		public const int SHOUT_IN = 3509;
 		public const int SHOUT_OUT = 2398;
 
+		// trade headers
+		public const int TRADE_START = 3622;
+		public const int TRADE_STOP = 1897;
+
 
 		private bool mimicFlag = false;
 		private int copyID;
@@ -105,5 +109,15 @@ namespace Mimic
             mimicFlag = false;
         }
 
-    }
+		private void Trade_Click(object sender, EventArgs e) {
+			for(int idx = 0; idx < 5; idx++) {
+				Connection.SendToServerAsync(TRADE_START, copyID);
+					Connection.SendToServerAsync(TRADE_STOP);
+					System.Threading.Thread.Sleep(5);
+				//for(int jdx = 0; jdx < 5; jdx++) {
+				//}
+				System.Threading.Thread.Sleep(2000);
+			}
+		}
+	}
 }

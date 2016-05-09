@@ -21,8 +21,11 @@ namespace ClientExtraction
 
         public ClientForm()
         {
-            // set triggers
-            Triggers.InAttach(3969, OnDiceIncoming);
+			// set triggers
+			Triggers.InAttach(1717, OnDiceIncoming);
+			Triggers.InAttach(2364, OnDiceIncoming);
+			Triggers.InAttach(1865, OnDiceIncoming);
+			Triggers.InAttach(2657, OnDiceIncoming);
             InitializeComponent();
         }
 
@@ -31,6 +34,9 @@ namespace ClientExtraction
         {
             if (flag)
             {
+				obj.IsBlocked = true;
+
+				/*
                 // byteify the packet
                 HMessage hmsg = obj.Packet;
                 byte[] data = hmsg.ToBytes();
@@ -47,6 +53,7 @@ namespace ClientExtraction
                     // print chat string
                     Connection.SendToServerAsync(3871, char_string, 4, 0);
                 }
+				*/
             }
         }
 

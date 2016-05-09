@@ -20,6 +20,7 @@ namespace FFBot
 		protected const int FURNI_MOVE = 191;
 		protected const int FURNI_PUT = 1111;
 
+		private int delay = 0;
 		private bool runFlag = false;
         private bool chooseFlag = false;
 
@@ -74,27 +75,31 @@ namespace FFBot
             }
         }
 
-        protected void OnFurniPlaced(InterceptedEventArgs args)
-        {
-            if (runFlag)
-            {
-                // packet ex.
-                //[0][0][0]6[5]Ô {×C[0][0][0][0][0][8][0][0][0][3][0][0][0][0][0][3]0.0[0]
+		protected void OnFurniPlaced(InterceptedEventArgs args) {
+			if(runFlag) {
+				// packet ex.
+				//[0][0][0]6[5]Ô {×C[0][0][0][0][0][8][0][0][0][3][0][0][0][0][0][3]0.0[0]
 
-                // parse space
-                byte[] data = args.Packet.ToBytes();
-                Tuple<int, int> furni_space = new Tuple<int, int>(data[17], data[21]);
+				// parse space
+				byte[] data = args.Packet.ToBytes();
+				Tuple<int, int> furni_space = new Tuple<int, int>(data[17], data[21]);
 
-                // move to that space
-                //if (space.Equals(furni_space))
-                //{
-                    Connection.SendToServerAsync(SPACE_SEL, furni_space.Item1, furni_space.Item2);
-                //}
+				// move to that space
+				//if (space.Equals(furni_space))
+				//{
+				System.Threading.Thread.Sleep(delay); // delay
+				Connection.SendToServerAsync(SPACE_SEL, furni_space.Item1, furni_space.Item2);
+				//}
 
-                // debug print space
-                //string space_string = "(" + furni_space.Item1 + ", " + furni_space.Item2 + ")";
-                //Connection.SendToServerAsync(3871, space_string, 4, 0);
-            }
-        }
-    }
+				// debug print space
+				//string space_string = "(" + furni_space.Item1 + ", " + furni_space.Item2 + ")";
+				//Connection.SendToServerAsync(3871, space_string, 4, 0);
+			}
+		}
+
+		private void button5_Click(object sender, EventArgs e) {
+			delay = (int)numericUpDown1.Value;
+		}
+
+	}
 }

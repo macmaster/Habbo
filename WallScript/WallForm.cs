@@ -48,7 +48,7 @@ namespace WallScript {
 			windowID += (data[7] << 16);
 			windowID += (data[6] << 24);
 
-			Connection.SendToServerAsync(SAY_OUT, (windowID / 10000).ToString(), 0, 0);
+			//Connection.SendToServerAsync(SAY_OUT, (windowID / 10000).ToString(), 0, 0);
 		}
 
 		private void faceLeft_Click(object sender, EventArgs e) {

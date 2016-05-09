@@ -44,6 +44,16 @@
 			// widthX
 			// 
 			this.widthX.Location = new System.Drawing.Point(69, 92);
+			this.widthX.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+			this.widthX.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            -2147483648});
 			this.widthX.Name = "widthX";
 			this.widthX.Size = new System.Drawing.Size(32, 20);
 			this.widthX.TabIndex = 0;
@@ -73,6 +83,16 @@
 			// widthY
 			// 
 			this.widthY.Location = new System.Drawing.Point(69, 121);
+			this.widthY.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+			this.widthY.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            -2147483648});
 			this.widthY.Name = "widthY";
 			this.widthY.Size = new System.Drawing.Size(32, 20);
 			this.widthY.TabIndex = 5;
@@ -90,7 +110,17 @@
 			// 
 			// lengthX
 			// 
+			this.lengthX.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
 			this.lengthX.Location = new System.Drawing.Point(224, 91);
+			this.lengthX.Minimum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            -2147483648});
 			this.lengthX.Name = "lengthX";
 			this.lengthX.Size = new System.Drawing.Size(32, 20);
 			this.lengthX.TabIndex = 7;
@@ -108,7 +138,22 @@
 			// 
 			// lengthY
 			// 
+			this.lengthY.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
 			this.lengthY.Location = new System.Drawing.Point(224, 120);
+			this.lengthY.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+			this.lengthY.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            -2147483648});
 			this.lengthY.Name = "lengthY";
 			this.lengthY.Size = new System.Drawing.Size(32, 20);
 			this.lengthY.TabIndex = 9;
