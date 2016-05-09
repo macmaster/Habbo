@@ -19,8 +19,11 @@ namespace TanjiExtension1
     public partial class Form1 : ExtensionForm
     {
 		// data headers
-		protected const int DANCE = 2628;
-		protected const int SAY_OUT = 1403;
+		protected const int DANCE = 3396;
+		protected const int MOVE = 845;
+		protected const int SAY_OUT = 389;
+		protected const int SAY_IN = 389;
+		protected const int CHANGE_MOOD = 1803;
 
 		private int dance = 1;
         private int msg_idx = 0;
@@ -61,35 +64,51 @@ namespace TanjiExtension1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 200; i++)
-            {
-                if (i % 2 == 1)
-                {
-                    Connection.SendToServerAsync(2363, 0); // stand
-                    //Connection.SendToServerAsync(3634, 1); // dance
-                }
-                else
-                {
-                    Connection.SendToServerAsync(2363, 1); // sit
-                }
-                System.Threading.Thread.Sleep(200);
-            }
-        }
+			// packet
+			//{l}{u:1803}{i:1}{i:1}{s:#000000}{i:76}{b:True}
+
+			string color = "#0000F0";
+			Random rval = new Random();
+			int shade = 76;
+			byte[] rgb = new byte[3];
+			for (int idx = 0x00; idx < 0xFF; idx++)
+			//for(shade = 76; shade < 256; shade++)
+			{
+				rgb[0] += (byte)rval.Next(256);
+				rgb[1] += (byte)rval.Next(256);
+				rgb[2] += (byte)rval.Next(256);
+				color = "#" + BitConverter.ToString(rgb).Replace("-", "");
+				Connection.SendToServerAsync(CHANGE_MOOD, 1, 1, color, shade, true); // change mood
+				System.Threading.Thread.Sleep(100);
+			}
+		}
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
-            for (int i = 0; i < 50; i++)
+			int x = (int)numericUpDown1.Value;
+			int y = (int)numericUpDown3.Value;
+			int n = (int)numericUpDown4.Value;
+            for (int i = 0; i < n; i++)
             {
-                if (i % 2 == 1)
-                {
-                    Connection.SendToServerAsync(3228, 127093914, 0); // candy tree
-                }
-                else
-                {
-                    Connection.SendToServerAsync(1265, 61929848); // pass candy
-                }
-                System.Threading.Thread.Sleep(600);
+				switch(i % 4) {
+					case 0:
+						Connection.SendToServerAsync(MOVE, x - 1, y + 1); // move 1
+						//Console.WriteLine(x+1);
+						break;
+					case 1:
+						Connection.SendToServerAsync(MOVE, x + 1, y + 1); // move 1
+						//Console.WriteLine(x+1);
+						break;
+					case 2:
+						Connection.SendToServerAsync(MOVE, x + 1, y - 1); // move 1
+						//Console.WriteLine(x-1);
+						break;
+					case 3:
+						Connection.SendToServerAsync(MOVE, x - 1, y - 1); // move 1
+						//Console.WriteLine(x-1);
+						break;
+				}
+				System.Threading.Thread.Sleep(1000);
             }
         }
 

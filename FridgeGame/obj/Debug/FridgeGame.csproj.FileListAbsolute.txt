@@ -1,0 +1,11 @@
+C:\Users\ronald\Documents\GitHub\Habbo\FridgeGame\bin\Debug\FridgeGame.exe.config
+C:\Users\ronald\Documents\GitHub\Habbo\FridgeGame\bin\Debug\FridgeGame.exe
+C:\Users\ronald\Documents\GitHub\Habbo\FridgeGame\bin\Debug\FridgeGame.pdb
+C:\Users\ronald\Documents\GitHub\Habbo\FridgeGame\bin\Debug\Sulakore.dll
+C:\Users\ronald\Documents\GitHub\Habbo\FridgeGame\bin\Debug\Sulakore.xml
+C:\Users\ronald\Documents\GitHub\Habbo\FridgeGame\obj\Debug\FridgeGame.csprojResolveAssemblyReference.cache
+C:\Users\ronald\Documents\GitHub\Habbo\FridgeGame\obj\Debug\FridgeGame.Form1.resources
+C:\Users\ronald\Documents\GitHub\Habbo\FridgeGame\obj\Debug\FridgeGame.Properties.Resources.resources
+C:\Users\ronald\Documents\GitHub\Habbo\FridgeGame\obj\Debug\FridgeGame.csproj.GenerateResource.Cache
+C:\Users\ronald\Documents\GitHub\Habbo\FridgeGame\obj\Debug\FridgeGame.exe
+C:\Users\ronald\Documents\GitHub\Habbo\FridgeGame\obj\Debug\FridgeGame.pdb
