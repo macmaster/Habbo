@@ -69,6 +69,17 @@ namespace ClientExtraction
             }
         }
 
-
-    }
+		private void button2_Click(object sender, EventArgs e) {
+			for(int i = 3000; i <= 3040; i++) {
+				Connection.SendToServerAsync(2362, i, "", -1);
+				if(i % 2 == 0) {
+					Connection.SendToServerAsync(2362, 1, "", -1);
+					Connection.SendToServerAsync(3548);
+					Connection.SendToServerAsync(3247);
+					Connection.SendToServerAsync(840);
+					System.Threading.Thread.Sleep(2000);
+				}
+			}
+		}
+	}
 }
