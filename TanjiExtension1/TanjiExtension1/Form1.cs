@@ -19,10 +19,10 @@ namespace TanjiExtension1
     public partial class Form1 : ExtensionForm
     {
 		// data headers
-		protected const int DANCE = 3396;
-		protected const int MOVE = 845;
-		protected const int SAY_OUT = 389;
-		protected const int SAY_IN = 389;
+		protected const int DANCE = 174;
+		protected const int MOVE = 3936;
+		protected const int SAY_OUT = 2929;
+		protected const int SAY_IN = 1089;
 		protected const int CHANGE_MOOD = 1803;
 
 		private int dance = 1;
