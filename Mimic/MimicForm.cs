@@ -17,10 +17,10 @@ namespace Mimic
     public partial class MimicForm : ExtensionForm
     {
 		// chat packet headers
-		public const int SAY_IN = 1557;
-		public const int SAY_OUT = 389;
-		public const int SHOUT_IN = 3509;
-		public const int SHOUT_OUT = 2398;
+		public const int SAY_IN = 1089;
+		public const int SAY_OUT = 2929;
+		public const int SHOUT_IN = 3813;
+		public const int SHOUT_OUT = 2336;
 
 		// trade headers
 		public const int TRADE_START = 3622;
