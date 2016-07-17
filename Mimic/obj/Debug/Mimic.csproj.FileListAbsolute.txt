@@ -16,6 +16,6 @@ C:\Users\ronald\Documents\GitHub\Habbo\Mimic\obj\Debug\Mimic.MimicForm.resources
 C:\Users\ronald\Documents\GitHub\Habbo\Mimic\obj\Debug\Mimic.Properties.Resources.resources
 C:\Users\ronald\Documents\GitHub\Habbo\Mimic\obj\Debug\Mimic.csproj.GenerateResource.Cache
 C:\Users\ronald\Documents\GitHub\Habbo\Mimic\obj\Debug\Mimic.pdb
-C:\Users\ronald\Documents\GitHub\Habbo\Mimic\bin\Debug\Mimic.exe.config
-C:\Users\ronald\Documents\GitHub\Habbo\Mimic\bin\Debug\Mimic.exe
-C:\Users\ronald\Documents\GitHub\Habbo\Mimic\obj\Debug\Mimic.exe
+C:\Users\ronald\Documents\GitHub\Habbo\Mimic\bin\Debug\Mimic.dll.config
+C:\Users\ronald\Documents\GitHub\Habbo\Mimic\bin\Debug\Mimic.dll
+C:\Users\ronald\Documents\GitHub\Habbo\Mimic\obj\Debug\Mimic.dll
