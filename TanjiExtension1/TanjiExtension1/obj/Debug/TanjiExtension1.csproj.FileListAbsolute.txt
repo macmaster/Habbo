@@ -22,6 +22,6 @@ C:\Users\ronald\Documents\GitHub\Habbo\TanjiExtension1\TanjiExtension1\obj\Debug
 C:\Users\ronald\Documents\GitHub\Habbo\TanjiExtension1\TanjiExtension1\obj\Debug\TanjiExtension1.Form1.resources
 C:\Users\ronald\Documents\GitHub\Habbo\TanjiExtension1\TanjiExtension1\obj\Debug\TanjiExtension1.Properties.Resources.resources
 C:\Users\ronald\Documents\GitHub\Habbo\TanjiExtension1\TanjiExtension1\obj\Debug\TanjiExtension1.csproj.GenerateResource.Cache
-C:\Users\ronald\Documents\GitHub\Habbo\TanjiExtension1\TanjiExtension1\bin\Debug\TanjiExtension1.exe.config
-C:\Users\ronald\Documents\GitHub\Habbo\TanjiExtension1\TanjiExtension1\bin\Debug\TanjiExtension1.exe
-C:\Users\ronald\Documents\GitHub\Habbo\TanjiExtension1\TanjiExtension1\obj\Debug\TanjiExtension1.exe
+C:\Users\ronald\Documents\GitHub\Habbo\TanjiExtension1\TanjiExtension1\bin\Debug\TanjiExtension1.dll.config
+C:\Users\ronald\Documents\GitHub\Habbo\TanjiExtension1\TanjiExtension1\bin\Debug\TanjiExtension1.dll
+C:\Users\ronald\Documents\GitHub\Habbo\TanjiExtension1\TanjiExtension1\obj\Debug\TanjiExtension1.dll

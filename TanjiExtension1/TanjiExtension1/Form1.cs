@@ -23,7 +23,7 @@ namespace TanjiExtension1
 		protected const int MOVE = 3936;
 		protected const int SAY_OUT = 2929;
 		protected const int SAY_IN = 1089;
-		protected const int CHANGE_MOOD = 1803;
+		protected const int CHANGE_MOOD = 2652;
 
 		private int dance = 1;
         private int msg_idx = 0;

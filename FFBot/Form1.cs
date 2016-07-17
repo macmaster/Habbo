@@ -16,9 +16,9 @@ namespace FFBot
 {
     public partial class Form1 : ExtensionForm
     {
-		protected const int SPACE_SEL = 845;
-		protected const int FURNI_MOVE = 191;
-		protected const int FURNI_PUT = 1111;
+		protected const int SPACE_SEL = 3963;
+		protected const int FURNI_MOVE = 2398;
+		protected const int FURNI_PUT = 1418;
 
 		private int delay = 0;
 		private bool runFlag = false;
