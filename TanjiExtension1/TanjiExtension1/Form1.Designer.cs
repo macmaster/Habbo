@@ -38,10 +38,16 @@
 			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
 			this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
 			this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+			this.button7 = new System.Windows.Forms.Button();
+			this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+			this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+			this.textBox1 = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -75,7 +81,7 @@
 			this.button3.BackColor = System.Drawing.SystemColors.Control;
 			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button3.ForeColor = System.Drawing.Color.Black;
-			this.button3.Location = new System.Drawing.Point(97, 193);
+			this.button3.Location = new System.Drawing.Point(12, 167);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(75, 23);
 			this.button3.TabIndex = 2;
@@ -196,12 +202,67 @@
             0,
             0});
 			// 
+			// button7
+			// 
+			this.button7.BackColor = System.Drawing.SystemColors.Control;
+			this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button7.ForeColor = System.Drawing.Color.Black;
+			this.button7.Location = new System.Drawing.Point(197, 167);
+			this.button7.Name = "button7";
+			this.button7.Size = new System.Drawing.Size(75, 23);
+			this.button7.TabIndex = 11;
+			this.button7.Text = "trade";
+			this.button7.UseVisualStyleBackColor = false;
+			this.button7.Click += new System.EventHandler(this.button7_Click);
+			// 
+			// numericUpDown5
+			// 
+			this.numericUpDown5.Location = new System.Drawing.Point(145, 170);
+			this.numericUpDown5.Maximum = new decimal(new int[] {
+            65536,
+            0,
+            0,
+            0});
+			this.numericUpDown5.Name = "numericUpDown5";
+			this.numericUpDown5.Size = new System.Drawing.Size(46, 20);
+			this.numericUpDown5.TabIndex = 12;
+			this.numericUpDown5.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			// 
+			// numericUpDown6
+			// 
+			this.numericUpDown6.Location = new System.Drawing.Point(145, 196);
+			this.numericUpDown6.Name = "numericUpDown6";
+			this.numericUpDown6.Size = new System.Drawing.Size(46, 20);
+			this.numericUpDown6.TabIndex = 13;
+			this.numericUpDown6.Value = new decimal(new int[] {
+            40,
+            0,
+            0,
+            0});
+			// 
+			// textBox1
+			// 
+			this.textBox1.Enabled = false;
+			this.textBox1.Location = new System.Drawing.Point(127, 196);
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(12, 20);
+			this.textBox1.TabIndex = 14;
+			this.textBox1.Text = "n";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::TanjiExtension1.Properties.Resources.Rooftop_Rumble;
 			this.ClientSize = new System.Drawing.Size(284, 261);
+			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.numericUpDown6);
+			this.Controls.Add(this.numericUpDown5);
+			this.Controls.Add(this.button7);
 			this.Controls.Add(this.numericUpDown4);
 			this.Controls.Add(this.numericUpDown3);
 			this.Controls.Add(this.numericUpDown1);
@@ -218,7 +279,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
         }
 
@@ -234,6 +298,10 @@
 		private System.Windows.Forms.NumericUpDown numericUpDown1;
 		private System.Windows.Forms.NumericUpDown numericUpDown3;
 		private System.Windows.Forms.NumericUpDown numericUpDown4;
+		private System.Windows.Forms.Button button7;
+		private System.Windows.Forms.NumericUpDown numericUpDown5;
+		private System.Windows.Forms.NumericUpDown numericUpDown6;
+		private System.Windows.Forms.TextBox textBox1;
 	}
 }
 

@@ -25,3 +25,11 @@ C:\Users\ronald\Documents\GitHub\Habbo\TanjiExtension1\TanjiExtension1\obj\Debug
 C:\Users\ronald\Documents\GitHub\Habbo\TanjiExtension1\TanjiExtension1\bin\Debug\TanjiExtension1.dll.config
 C:\Users\ronald\Documents\GitHub\Habbo\TanjiExtension1\TanjiExtension1\bin\Debug\TanjiExtension1.dll
 C:\Users\ronald\Documents\GitHub\Habbo\TanjiExtension1\TanjiExtension1\obj\Debug\TanjiExtension1.dll
+C:\Users\ronny\Desktop\Habbo\TanjiExtension1\TanjiExtension1\bin\Debug\TanjiExtension1.pdb
+C:\Users\ronny\Desktop\Habbo\TanjiExtension1\TanjiExtension1\obj\Debug\TanjiExtension1.Form1.resources
+C:\Users\ronny\Desktop\Habbo\TanjiExtension1\TanjiExtension1\obj\Debug\TanjiExtension1.Properties.Resources.resources
+C:\Users\ronny\Desktop\Habbo\TanjiExtension1\TanjiExtension1\obj\Debug\TanjiExtension1.csproj.GenerateResource.Cache
+C:\Users\ronny\Desktop\Habbo\TanjiExtension1\TanjiExtension1\obj\Debug\TanjiExtension1.pdb
+C:\Users\ronny\Desktop\Habbo\TanjiExtension1\TanjiExtension1\bin\Debug\TanjiExtension1.dll.config
+C:\Users\ronny\Desktop\Habbo\TanjiExtension1\TanjiExtension1\bin\Debug\TanjiExtension1.dll
+C:\Users\ronny\Desktop\Habbo\TanjiExtension1\TanjiExtension1\obj\Debug\TanjiExtension1.dll
