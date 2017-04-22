@@ -42,6 +42,7 @@
 			this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
 			this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
 			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.button8 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -235,11 +236,16 @@
 			// numericUpDown6
 			// 
 			this.numericUpDown6.Location = new System.Drawing.Point(145, 196);
+			this.numericUpDown6.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
 			this.numericUpDown6.Name = "numericUpDown6";
 			this.numericUpDown6.Size = new System.Drawing.Size(46, 20);
 			this.numericUpDown6.TabIndex = 13;
 			this.numericUpDown6.Value = new decimal(new int[] {
-            40,
+            10,
             0,
             0,
             0});
@@ -253,12 +259,26 @@
 			this.textBox1.TabIndex = 14;
 			this.textBox1.Text = "n";
 			// 
+			// button8
+			// 
+			this.button8.BackColor = System.Drawing.SystemColors.Control;
+			this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button8.ForeColor = System.Drawing.Color.Black;
+			this.button8.Location = new System.Drawing.Point(197, 196);
+			this.button8.Name = "button8";
+			this.button8.Size = new System.Drawing.Size(75, 23);
+			this.button8.TabIndex = 15;
+			this.button8.Text = "latch";
+			this.button8.UseVisualStyleBackColor = false;
+			this.button8.Click += new System.EventHandler(this.button8_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = global::TanjiExtension1.Properties.Resources.Rooftop_Rumble;
 			this.ClientSize = new System.Drawing.Size(284, 261);
+			this.Controls.Add(this.button8);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.numericUpDown6);
 			this.Controls.Add(this.numericUpDown5);
@@ -302,6 +322,7 @@
 		private System.Windows.Forms.NumericUpDown numericUpDown5;
 		private System.Windows.Forms.NumericUpDown numericUpDown6;
 		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.Button button8;
 	}
 }
 

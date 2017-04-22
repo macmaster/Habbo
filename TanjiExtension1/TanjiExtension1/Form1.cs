@@ -29,11 +29,15 @@ namespace TanjiExtension1 {
 		private int dance = 1;
 		private int msg_idx = 0;
 		private bool mimicFlag = false;
+		private bool tradeFlag = false;
+		private bool moodFlag = false;
+		private bool danceFlag = false;
 
 		public Form1() {
 			// start up the extension form
 
-			Triggers.InAttach(1231, OnChatIncoming);
+			Triggers.InAttach(SAY_IN, OnChatIncoming);
+			Triggers.OutAttach(TRADE_START, OnPlayerTraded);
 			InitializeComponent();
 		}
 
@@ -48,13 +52,23 @@ namespace TanjiExtension1 {
 		}
 
 		private void button2_Click(object sender, EventArgs e) {
-			// spam dance button
-			new Thread(SpamDance).Start();
+			// spam the dance
+			if(danceFlag) {
+				danceFlag = false;
+			} else {
+				danceFlag = true;
+				new Thread(SpamDance).Start();
+			}
 		}
 
 		private void button3_Click(object sender, EventArgs e) {
 			// spam the moodlight
-			new Thread(SpamMoodlight).Start();
+			if(moodFlag) {
+				moodFlag = false;
+			} else {
+				moodFlag = true;
+				new Thread(SpamMoodlight).Start();
+			}
 		}
 
 		private void button4_Click(object sender, EventArgs e) {
@@ -124,9 +138,15 @@ namespace TanjiExtension1 {
 			new Thread(SpamTrade).Start();
 		}
 
+
+		private void button8_Click(object sender, EventArgs e) {
+			tradeFlag = true;
+		}
+
 		protected void SpamDance() {
-			for(int i = 0; i < 400; i++) {
-				Connection.SendToServerAsync(DANCE, dance * (i % 2)); // dance
+			int x = 1;
+			while(danceFlag) {
+				Connection.SendToServerAsync(DANCE, dance * (x ^= 1)); // dance
 				System.Threading.Thread.Sleep(50);
 			}
 			Connection.SendToServerAsync(DANCE, dance); // dance
@@ -136,13 +156,13 @@ namespace TanjiExtension1 {
 
 		protected void SpamTrade() {
 			int user = Decimal.ToInt32(numericUpDown5.Value);
-			int delay = 100, period = 500;
-			int k = 8, n = Decimal.ToInt32(numericUpDown6.Value);
+			int delay = 5, period = 1500;
+			int k = 15, n = Decimal.ToInt32(numericUpDown6.Value);
 			for(int i = 0; i < n; i++) {
 				Connection.SendToServerAsync(TRADE_START, user); // trade
 				for(int j = 0; j < k; j++) {
-					System.Threading.Thread.Sleep(delay / k);
 					Connection.SendToServerAsync(TRADE_STOP);
+					//System.Threading.Thread.Sleep(delay);
 				}
 				System.Threading.Thread.Sleep(period);
 			}
@@ -158,9 +178,7 @@ namespace TanjiExtension1 {
 			Random rval = new Random();
 			int shade = 76;
 			byte[] rgb = new byte[3];
-			for(int idx = 0x00; idx < 512; idx++)
-			//for(shade = 76; shade < 256; shade++)
-			{
+			while(moodFlag) {
 				rgb[0] += (byte)rval.Next(256);
 				rgb[1] += (byte)rval.Next(256);
 				rgb[2] += (byte)rval.Next(256);
@@ -169,5 +187,21 @@ namespace TanjiExtension1 {
 				System.Threading.Thread.Sleep(50);
 			}
 		}
+
+		// player traded
+		protected void OnPlayerTraded(InterceptedEventArgs obj) {
+			if(tradeFlag) {
+				// byteify the packet
+				obj.IsBlocked = true;
+				HMessage tradepk = obj.Packet;
+				byte[] data = tradepk.ToBytes();
+
+				// set habbo trade id (chat id)
+				int tradeID = data[9] + (data[8] << 8) + (data[7] << 16) + (data[6] << 24);
+				numericUpDown5.Value = tradeID;
+				tradeFlag = false;
+			}
+		}
+
 	}
 }
