@@ -33,4 +33,3 @@ C:\Users\ronny\Desktop\Habbo\TanjiExtension1\TanjiExtension1\obj\Debug\TanjiExte
 C:\Users\ronny\Desktop\Habbo\TanjiExtension1\TanjiExtension1\bin\Debug\TanjiExtension1.dll.config
 C:\Users\ronny\Desktop\Habbo\TanjiExtension1\TanjiExtension1\bin\Debug\TanjiExtension1.dll
 C:\Users\ronny\Desktop\Habbo\TanjiExtension1\TanjiExtension1\obj\Debug\TanjiExtension1.dll
-C:\Users\ronny\Desktop\Habbo\TanjiExtension1\TanjiExtension1\obj\Debug\TanjiExtension1.csprojResolveAssemblyReference.cache

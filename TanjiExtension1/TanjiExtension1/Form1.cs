@@ -18,13 +18,13 @@ using System.Threading;
 namespace TanjiExtension1 {
 	public partial class Form1 : ExtensionForm {
 		// data headers
-		protected const int TRADE_START = 1793;
-		protected const int TRADE_STOP = 3350;
-		protected const int DANCE = 3540;
-		protected const int MOVE = 2311;
-		protected const int SAY_OUT = 1844;
-		protected const int SAY_IN = 1720;
-		protected const int CHANGE_MOOD = 1282;
+		protected const int TRADE_START = 265;
+		protected const int TRADE_STOP = 1841;
+		protected const int DANCE = 1515;
+		protected const int MOVE = 3927;
+		protected const int SAY_OUT = 94;
+		protected const int SAY_IN = 846;
+		protected const int CHANGE_MOOD = 3872;
 
 		private int dance = 1;
 		private int msg_idx = 0;
